@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TodoRepository extends JpaRepository<Todo,Long> {
     List<Todo> findByDone(boolean done);
+    boolean existsByTitle(String title);
 }
